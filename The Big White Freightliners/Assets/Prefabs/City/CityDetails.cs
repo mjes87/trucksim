@@ -17,8 +17,6 @@ public class CityDetails : MonoBehaviour
     public string cityName = "City ?";
     public CitySizes citySize = CitySizes.LARGE;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
