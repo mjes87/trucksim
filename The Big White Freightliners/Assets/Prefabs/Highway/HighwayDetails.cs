@@ -11,19 +11,23 @@ public class HighwayDetails : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.position = startPoint.position;
-        this.transform.position.Set(startPoint.position.x, startPoint.position.y - 0.2f, startPoint.position.z);
+        //all of this is to have the highways align with their starting and endpoints (cities),
+        //and scale them so they properly reach
+        this.transform.position = startPoint.position;                                                                     //Set to the start position to get the proper facing direction to the end point
+        this.transform.position = new Vector3(startPoint.position.x, startPoint.position.y - 0.2f, startPoint.position.z); //slightly drop the Y to not cover the city markers
         this.transform.LookAt(endPoint, Vector3.up);
-        //this.transform.rotation = new Quaternion(this.transform.rotation.x, this.transform.rotation.y - 90.0f, this.transform.rotation.z,1);
 
-//        Quaternion rotit = new Quaternion();
-//        float rotAngle = Mathf.Atan((startPoint.position.z - endPoint.position.z) / (startPoint.position.x - endPoint.position.x)) * 180 / Mathf.PI;
-//        if (rotAngle > 180)
-//        {
-//            rotAngle -= 180;
-//        }
-//        rotit.Set(this.transform.rotation.x, rotAngle,this.transform.rotation.z, 1);
-//        this.transform.rotation = rotit;
+        Vector3 cityScale = endPoint.position - startPoint.position;
+        cityScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, cityScale.magnitude);
+        this.transform.localScale = cityScale;
+
+        this.transform.position = new Vector3((endPoint.position.x - startPoint.position.x) / 2 + startPoint.position.x,
+                                               this.transform.position.y,
+                                              (endPoint.position.z - startPoint.position.z) / 2 + startPoint.position.z);
+
+        TextMesh nameMesh = this.GetComponentInChildren(typeof(TextMesh)) as TextMesh;
+        nameMesh.text = highwayName;
+        nameMesh.transform.localScale = new Vector3(nameMesh.transform.localScale.x, nameMesh.transform.localScale.y, nameMesh.transform.localScale.z / cityScale.z);
     }
 
     // Update is called once per frame
