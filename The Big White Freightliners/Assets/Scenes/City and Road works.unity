@@ -283,17 +283,17 @@ PrefabInstance:
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: 4.86
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6327676
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.64
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -335,18 +335,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4842975584495530985, guid: 58c5855e25cdd134582778a74e234c32,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4842975584495530986, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Text
       value: Highway 3
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4842975584427566887, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+    - target: {fileID: 508025202, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 752517233}
+    - target: {fileID: 508025202, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: endPoint
+      value: 
+      objectReference: {fileID: 8475856500630885987}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &508025200 stripped
 Transform:
@@ -354,27 +356,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 508025199}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &508025201 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
-    type: 3}
-  m_PrefabInstance: {fileID: 508025199}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &508025202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508025201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0c1d70e983ae7745b32bad6b3fded3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highwayName: 
-  startPoint: {fileID: 752517233}
-  endPoint: {fileID: 8475856500630885987}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,8 +431,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.70710665, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 1.4101524, y: 26.87664, z: -0.103355475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -644,17 +625,17 @@ PrefabInstance:
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6327676
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.05
+      value: 4.14
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -696,18 +677,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4842975584495530985, guid: 58c5855e25cdd134582778a74e234c32,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4842975584495530986, guid: 58c5855e25cdd134582778a74e234c32,
-        type: 3}
-      propertyPath: m_Text
-      value: Highway 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4842975584427566887, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 307554126}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: endPoint
+      value: 
+      objectReference: {fileID: 752517233}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &1084468305 stripped
 Transform:
@@ -715,27 +693,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1084468304}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1084468306 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
-    type: 3}
-  m_PrefabInstance: {fileID: 1084468304}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1084468307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084468306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0c1d70e983ae7745b32bad6b3fded3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highwayName: 
-  startPoint: {fileID: 307554126}
-  endPoint: {fileID: 752517233}
 --- !u!1 &1580177602
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,17 +774,17 @@ PrefabInstance:
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0298476
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6327676
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.383359
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -869,6 +826,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4842975584495530986, guid: 58c5855e25cdd134582778a74e234c32,
+        type: 3}
+      propertyPath: m_Text
+      value: Highway 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4842975584427566887, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: startPoint
@@ -879,11 +841,14 @@ PrefabInstance:
       propertyPath: endPoint
       value: 
       objectReference: {fileID: 307554126}
-    - target: {fileID: 4842975584495530986, guid: 58c5855e25cdd134582778a74e234c32,
-        type: 3}
-      propertyPath: m_Text
-      value: Highway 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 508025202, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 8475856500630885987}
+    - target: {fileID: 508025202, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: endPoint
+      value: 
+      objectReference: {fileID: 307554126}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &4842975584427566886 stripped

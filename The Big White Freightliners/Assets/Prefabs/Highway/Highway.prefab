@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 326856598566658670}
   - component: {fileID: 8434087531757394396}
   - component: {fileID: 7738851707286023728}
-  - component: {fileID: 4842975584427566887}
+  - component: {fileID: 508025202}
+  - component: {fileID: 1084468307}
   m_Layer: 0
   m_Name: Highway
   m_TagString: Highway
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1373405493895315798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.56, y: 0, z: 4.81}
-  m_LocalScale: {x: 10, y: 0.1, z: 1}
+  m_LocalScale: {x: 1, y: 0.1, z: 10}
   m_Children:
   - {fileID: 4842975584495530985}
   m_Father: {fileID: 0}
@@ -93,7 +94,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4842975584427566887
+--- !u!114 &508025202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +106,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c1d70e983ae7745b32bad6b3fded3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highwayName: Highway ?
+  highwayName: 
+  startPoint: {fileID: 0}
+  endPoint: {fileID: 0}
+--- !u!114 &1084468307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373405493895315798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c1d70e983ae7745b32bad6b3fded3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highwayName: 
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
 --- !u!1001 &5027708310590518503
@@ -115,15 +131,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007059560957200792}
     m_Modifications:
-    - target: {fileID: 500944852858963727, guid: 1ad083645cb9e3f4588343bad9715cbe,
-        type: 3}
-      propertyPath: m_Name
-      value: HighwayName
-      objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.007
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
@@ -133,27 +144,27 @@ PrefabInstance:
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
@@ -168,12 +179,17 @@ PrefabInstance:
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 500944852858963726, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 500944852858963727, guid: 1ad083645cb9e3f4588343bad9715cbe,
+        type: 3}
+      propertyPath: m_Name
+      value: HighwayName
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad083645cb9e3f4588343bad9715cbe, type: 3}
