@@ -6,6 +6,7 @@ TagManager:
   tags:
   - City
   - Highway
+  - Junction
   layers:
   - Default
   - TransparentFX

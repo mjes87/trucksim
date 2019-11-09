@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class HighwayDetails : MonoBehaviour
 {
-    public string highwayName;
+    public string highwayName = "???";
     public Transform startPoint;
     public Transform endPoint;
+    public float travelTime = 1.0f;
 
     // Start is called before the first frame update
     void Start()
