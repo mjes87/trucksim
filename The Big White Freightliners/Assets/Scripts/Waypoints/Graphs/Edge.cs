@@ -7,10 +7,10 @@ public class Edge
 	public Node endNode;
     public float edgeCost;
 	
-	public Edge(Node from, Node to) //, float cost)
+	public Edge(Node from, Node to, float cost)
 	{
 		startNode = from;
 		endNode = to;
-//        edgeCost = cost;
+        edgeCost = cost;
 	}
 }

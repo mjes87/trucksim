@@ -10,7 +10,7 @@ public class FollowPath : MonoBehaviour
     float accuracy = 1.0f;
     float rotSpeed = 2.0f;
     public GameObject wpManager;
-    GameObject[] wps;
+    List<GameObject> wps;
     GameObject currentNode;
     int currentWP = 0;
     Graph g;

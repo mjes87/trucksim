@@ -29,14 +29,14 @@ public class Graph
 		}
 	}
 	
-	public void AddEdge(GameObject fromNode, GameObject toNode) //, float cost)
+	public void AddEdge(GameObject fromNode, GameObject toNode, float cost)
 	{
 		Node from = findNode(fromNode);
 		Node to = findNode(toNode);
 
-		if(from != null && to != null) // && cost != 0.0f)
+		if(from != null && to != null && cost != 0.0f)
 		{
-            Edge e = new Edge(from, to); //, cost);
+            Edge e = new Edge(from, to, cost);
 			edges.Add(e);
 			from.edgelist.Add(e);
 		}	

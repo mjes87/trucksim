@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: C to 401/20
+      value: 401 C to 20
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -187,11 +187,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 468537635}
+      objectReference: {fileID: 1785280098}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 239258540}
+      objectReference: {fileID: 1465493595}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 401
@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.99
+      value: 30.8
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.52
+      value: 16.2
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
@@ -282,6 +282,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
     type: 3}
   m_PrefabInstance: {fileID: 58352767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &102466372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8475856501679912762, guid: bbc989838953e224d9a1ecf548fa4c34,
+    type: 3}
+  m_PrefabInstance: {fileID: 307554125}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
@@ -367,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.83
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
@@ -377,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.42
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
@@ -442,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.45
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -452,7 +458,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.57
+      value: 20.9
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -539,7 +545,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.35
+      value: 10.6
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -549,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -604,6 +610,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 468537634}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &507076670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8475856501679912762, guid: bbc989838953e224d9a1ecf548fa4c34,
+    type: 3}
+  m_PrefabInstance: {fileID: 752517232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &508025199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,7 +626,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: 401 K to c
+      value: 401 K to 416
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -684,11 +696,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 8475856500630885987}
+      objectReference: {fileID: 2064853884}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 4883648763303372912}
+      objectReference: {fileID: 919127802}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 401
@@ -935,7 +947,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.56
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -945,7 +957,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.66
+      value: 8.6
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -1010,6 +1022,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752517232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &919127802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7537799368167609728, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4883648763303372911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1084468304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1020,7 +1038,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: 417 o to m
+      value: 417 o to 40
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -1085,11 +1103,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 307554126}
+      objectReference: {fileID: 102466372}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 58352768}
+      objectReference: {fileID: 1829095391}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 417
@@ -1116,7 +1134,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: 401/20 to M
+      value: 20 401 to M
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -1181,11 +1199,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 239258540}
+      objectReference: {fileID: 1465493595}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 752517233}
+      objectReference: {fileID: 507076670}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 20
@@ -1201,6 +1219,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
     type: 3}
   m_PrefabInstance: {fileID: 1374537303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1465493595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7537799368167609728, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 239258539}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1580177602
 GameObject:
@@ -1246,7 +1270,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: 417/40 to M
+      value: 40  417 to M
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -1311,11 +1335,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 58352768}
+      objectReference: {fileID: 1829095391}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 752517233}
+      objectReference: {fileID: 507076670}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 40
@@ -1332,6 +1356,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1752728139}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1785280098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8475856501679912762, guid: bbc989838953e224d9a1ecf548fa4c34,
+    type: 3}
+  m_PrefabInstance: {fileID: 468537634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1804622186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1342,7 +1372,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: 401 417jct to c
+      value: 401 416 to C
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -1407,11 +1437,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 4883648763303372912}
+      objectReference: {fileID: 919127802}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 468537635}
+      objectReference: {fileID: 1785280098}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 401
@@ -1427,6 +1457,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
     type: 3}
   m_PrefabInstance: {fileID: 1804622186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1829095391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7537799368167609728, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 58352767}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1954221583
 GameObject:
@@ -1465,6 +1501,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2064853884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8475856501679912762, guid: bbc989838953e224d9a1ecf548fa4c34,
+    type: 3}
+  m_PrefabInstance: {fileID: 8475856500630885986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086088025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,8 +1536,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309fc917b18e0642b4b5c01efbb9ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
-  links: []
+  waypoints:
+  - {fileID: 0}
+  links:
+  - node1: {fileID: 0}
+    node2: {fileID: 0}
+    dir: 0
+    cost: 0
 --- !u!4 &2086088027
 Transform:
   m_ObjectHideFlags: 0
@@ -1520,7 +1567,7 @@ PrefabInstance:
     - target: {fileID: 1373405493895315798, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
       propertyPath: m_Name
-      value: 416 o to 401 JCT
+      value: 416 o to 401
       objectReference: {fileID: 0}
     - target: {fileID: 2007059560957200792, guid: 58c5855e25cdd134582778a74e234c32,
         type: 3}
@@ -1585,11 +1632,11 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
-      objectReference: {fileID: 307554126}
+      objectReference: {fileID: 102466372}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 4883648763303372912}
+      objectReference: {fileID: 919127802}
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 416
@@ -1612,12 +1659,12 @@ PrefabInstance:
     - target: {fileID: 7537799368167609728, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_Name
-      value: 417/401 JCT
+      value: 416/401 JCT
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.14
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
@@ -1627,7 +1674,7 @@ PrefabInstance:
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.343359
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 9124608666059370742, guid: a51d77b12d4a81c41b4cfc25d9a706c2,
         type: 3}
@@ -1692,7 +1739,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.59
+      value: -34.4
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -1702,7 +1749,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.21
+      value: -15.4
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
