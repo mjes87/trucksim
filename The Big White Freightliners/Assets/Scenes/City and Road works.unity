@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: highwayName
       value: 401
       objectReference: {fileID: 0}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: travelTime
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &35193964 stripped
@@ -689,6 +693,10 @@ PrefabInstance:
       propertyPath: highwayName
       value: 401
       objectReference: {fileID: 0}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: travelTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 508025202, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: startPoint
       value: 
@@ -811,14 +819,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601854631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.529847, y: 0.8172324, z: -5.213359}
+  m_LocalPosition: {x: -4.529847, y: 0, z: -5.213359}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4883648763303372912}
   - {fileID: 239258540}
   - {fileID: 58352768}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687355574
 GameObject:
@@ -932,7 +940,7 @@ PrefabInstance:
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6827676
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8475856501679912763, guid: bbc989838953e224d9a1ecf548fa4c34,
         type: 3}
@@ -1086,6 +1094,10 @@ PrefabInstance:
       propertyPath: highwayName
       value: 417
       objectReference: {fileID: 0}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: travelTime
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &1084468305 stripped
@@ -1178,6 +1190,10 @@ PrefabInstance:
       propertyPath: highwayName
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: travelTime
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &1374537304 stripped
@@ -1218,7 +1234,7 @@ Transform:
   - {fileID: 752517233}
   - {fileID: 468537635}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1752728139
 PrefabInstance:
@@ -1303,6 +1319,10 @@ PrefabInstance:
     - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
       propertyPath: highwayName
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: travelTime
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
@@ -1396,6 +1416,10 @@ PrefabInstance:
       propertyPath: highwayName
       value: 401
       objectReference: {fileID: 0}
+    - target: {fileID: 1084468307, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
+      propertyPath: travelTime
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c5855e25cdd134582778a74e234c32, type: 3}
 --- !u!4 &1804622187 stripped
@@ -1439,7 +1463,52 @@ Transform:
   - {fileID: 1374537304}
   - {fileID: 1752728140}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2086088025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086088027}
+  - component: {fileID: 2086088026}
+  m_Layer: 0
+  m_Name: WayPoint Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2086088026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086088025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e309fc917b18e0642b4b5c01efbb9ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  links: []
+--- !u!4 &2086088027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086088025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.529847, y: 0.8172324, z: -5.213359}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4842975584427566884
 PrefabInstance:

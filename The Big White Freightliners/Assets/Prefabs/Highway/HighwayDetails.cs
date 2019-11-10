@@ -15,8 +15,8 @@ public class HighwayDetails : MonoBehaviour
         //all of this is to have the highways align with their starting and endpoints (cities),
         //and scale them so they properly reach
         this.transform.position = startPoint.position;                                                                     //Set to the start position to get the proper facing direction to the end point
-        this.transform.position = new Vector3(startPoint.position.x, startPoint.position.y - 0.2f, startPoint.position.z); //slightly drop the Y to not cover the city markers
         this.transform.LookAt(endPoint, Vector3.up);
+        this.transform.position = new Vector3(startPoint.position.x, startPoint.position.y - 0.2f, startPoint.position.z); //slightly drop the Y to not cover the city markers
 
         Vector3 cityScale = endPoint.position - startPoint.position;
         cityScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, cityScale.magnitude);
