@@ -9,19 +9,21 @@ public struct Link
     public GameObject node1;
     public GameObject node2;
     public direction dir;
-    public float cost;
+    public float travelTime;
 }
 
 public class WPManager : MonoBehaviour
 {
-    //    public GameObject[] waypoints;
-    [HideInInspector] public List<GameObject> waypoints;
-    [HideInInspector] public List<Link> links;
     public Graph graph = new Graph();
+
+    [HideInInspector] public List<GameObject> waypoints;                        //changed to a list because we need to add the city and junctions to the array
+    [HideInInspector] public List<Link> links;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        waypoints.Clear();
         waypoints.AddRange(GameObject.FindGameObjectsWithTag("City"));          //simplify level design by autobuilding our waypoint and links list
         waypoints.AddRange(GameObject.FindGameObjectsWithTag("Junction"));
 
@@ -33,7 +35,7 @@ public class WPManager : MonoBehaviour
             tlnk.dir = Link.direction.Bi;
             tlnk.node1 = hw.GetComponent<HighwayDetails>().startPoint;
             tlnk.node2 = hw.GetComponent<HighwayDetails>().endPoint;
-            tlnk.cost = hw.GetComponent<HighwayDetails>().travelTime;
+            tlnk.travelTime = hw.GetComponent<HighwayDetails>().travelTime;
 
             links.Add(tlnk);
         }
@@ -46,10 +48,10 @@ public class WPManager : MonoBehaviour
             }
             foreach(Link l in links)
             {
-                graph.AddEdge(l.node1, l.node2, l.cost);
+                graph.AddEdge(l.node1, l.node2, l.travelTime);
                 if(l.dir == Link.direction.Bi)
                 {
-                    graph.AddEdge(l.node2, l.node1, l.cost);
+                    graph.AddEdge(l.node2, l.node1, l.travelTime);
                 }
             }
         }

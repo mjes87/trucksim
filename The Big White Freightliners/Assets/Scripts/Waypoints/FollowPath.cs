@@ -5,21 +5,25 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour
 {
 
+    public  GameObject startupNode;
+    public GameObject wpManager;
+
     Transform goal;
     float speed = 5.0f;
     float accuracy = 1.0f;
-    float rotSpeed = 2.0f;
-    public GameObject wpManager;
+    float rotSpeed = 20.0f;
+
     List<GameObject> wps;
     GameObject currentNode;
     int currentWP = 0;
     Graph g;
+
     // Start is called before the first frame update
     void Start()
     {
         wps = wpManager.GetComponent<WPManager>().waypoints;
         g = wpManager.GetComponent<WPManager>().graph;
-        currentNode = wps[1];        
+        currentNode = startupNode;        
     }
 
     // Update is called once per frame
@@ -64,5 +68,16 @@ public class FollowPath : MonoBehaviour
     {
         g.AStar(currentNode, wps[7]);
         currentWP = 0;
+    }
+
+    public void SetDestination (GameObject city)
+    {
+        if (city.CompareTag("City"))
+        {
+            g.AStar(currentNode, city);
+            currentWP = 0;
+            Debug.Log(city.name + " is now the destination (" + g.getPathLength() + ")");
+            //g.printPath();
+        }
     }
 }

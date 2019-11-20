@@ -29,14 +29,14 @@ public class Graph
 		}
 	}
 	
-	public void AddEdge(GameObject fromNode, GameObject toNode, float cost)
+	public void AddEdge(GameObject fromNode, GameObject toNode, float travelTime)
 	{
 		Node from = findNode(fromNode);
 		Node to = findNode(toNode);
 
-		if(from != null && to != null && cost != 0.0f)
+		if(from != null && to != null && travelTime != 0.0f)
 		{
-            Edge e = new Edge(from, to, cost);
+            Edge e = new Edge(from, to, travelTime);
 			edges.Add(e);
 			from.edgelist.Add(e);
 		}	
@@ -79,6 +79,14 @@ public class Graph
 	  
 	  	if(start == null || end == null)
 	  	{
+            if (start == null)
+            {
+                Debug.Log("no starting node");
+            }
+            if (end == null)
+            {
+                Debug.Log("no ending node");
+            }
 	  		return false;	
 	  	}
 	  	
@@ -162,6 +170,7 @@ public class Graph
 	  float dy = a.yPos - b.yPos;
 	  float dz = a.zPos - b.zPos;
 	  float dist = dx*dx + dy*dy + dz*dz;
+       
 	  return( dist );
     }
 
