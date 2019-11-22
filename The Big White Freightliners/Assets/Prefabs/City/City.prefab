@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8475856500704877330}
   m_Layer: 0
   m_Name: CityDot
-  m_TagString: Untagged
+  m_TagString: CityCenter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8475856501180568672}
   m_Layer: 0
   m_Name: CityArea
-  m_TagString: Untagged
+  m_TagString: CityLimits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8475856501348674585}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.05, z: 1.22}
+  m_LocalPosition: {x: 0, y: 0.1, z: 1.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8475856501679912763}
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   citySize: 2
+  travelTime: 0
 --- !u!135 &8170205945967593863
 SphereCollider:
   m_ObjectHideFlags: 0

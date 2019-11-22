@@ -93,16 +93,14 @@ public class GameTime : MonoBehaviour
         This method takes in a speed of Unity units per hour
         (basically a road/city's Z-scale divided by its travelTime)
 
-        It then converts it to minutes
-        then to real seconds with gmScaleTime
-        This gives us the real time seconds to cross the city
-        when we invert that we now a Unity units per real Time
-        which is the normal speed value we use when in our normal
-        ...Translate( , , speed*Time.deltaTime) 
+        As we have 1hr game time = 1 minute real time unt/h is also
+        equal to unt/m in real time. Multiply this by our time scale
+        and a road/city that takes one hour to cross in game time
+        take 1 minute in real playing time. 
 
     ***************************************************************/
     public float FindMySpeed (float untph)
     {
-        return (1.0f / (untph * 60 / gmTimeScale));
+        return (untph / 60.0f * gmTimeScale);
     }
 }

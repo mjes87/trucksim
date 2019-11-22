@@ -38,30 +38,14 @@ public class CityDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-/*
-        if (Input.GetMouseButtonDown(0))
-        {
+        
+        
 
-
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log("I hit something");
-                if (hit.transform.name == this.name)
-                {
-                    Debug.Log(this.name + " was left clicked");
-                    pathMaker.SetDestination(this.gameObject);
-                }
-            }
-        }
-   */         
     }
 
     private void OnMouseDown()
     {
-        Debug.Log(this.name + " was left clicked");
+        //Debug.Log(this.name + " was left clicked");
         pathMaker.SetDestination(this.gameObject);
     }
 }

@@ -31,7 +31,11 @@ public class FollowPath : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (g.getPathLength() == 0 || currentWP == g.getPathLength())
+        if (g == null)
+        {
+            return;
+        }
+        else if (g.getPathLength() == 0 || currentWP == g.getPathLength())
         {
             return;
         }
@@ -61,7 +65,7 @@ public class FollowPath : MonoBehaviour
             g.AStar(currentNode, city);
             currentWP = 0;
             Debug.Log(city.name + " is now the destination (" + g.getPathLength() + ")");
-            g.printPath();
+            //g.printPath();
         }
     }
 

@@ -8,6 +8,8 @@ TagManager:
   - Highway
   - Junction
   - Truck
+  - CityCenter
+  - CityLimits
   layers:
   - Default
   - TransparentFX
