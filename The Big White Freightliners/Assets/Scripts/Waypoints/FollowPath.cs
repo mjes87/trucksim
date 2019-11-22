@@ -8,6 +8,8 @@ public class FollowPath : MonoBehaviour
     public  GameObject startupNode;
     public GameObject wpManager;
 
+    public void SetSpeed(float spd) { speed = spd; }
+
     Transform goal;
     float speed = 5.0f;
     float accuracy = 1.0f;
@@ -52,24 +54,6 @@ public class FollowPath : MonoBehaviour
         }
     }
 
-    public void GoToHeli()
-    {
-        g.AStar(currentNode, wps[0]);
-        currentWP = 0;
-    }
-
-    public void GoToRuin()
-    {
-        g.AStar(currentNode, wps[3]);
-        currentWP = 0;
-    }
-
-    public void GoToPot()
-    {
-        g.AStar(currentNode, wps[7]);
-        currentWP = 0;
-    }
-
     public void SetDestination (GameObject city)
     {
         if (city.CompareTag("City"))
@@ -77,7 +61,8 @@ public class FollowPath : MonoBehaviour
             g.AStar(currentNode, city);
             currentWP = 0;
             Debug.Log(city.name + " is now the destination (" + g.getPathLength() + ")");
-            //g.printPath();
+            g.printPath();
         }
     }
+
 }

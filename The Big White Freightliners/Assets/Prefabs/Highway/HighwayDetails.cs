@@ -21,16 +21,16 @@ public class HighwayDetails : MonoBehaviour
         this.transform.LookAt(enP, Vector3.up);
         this.transform.position = new Vector3(stP.position.x, stP.position.y - 0.2f, stP.position.z);   //slightly drop the Y to not cover the city markers
 
-        Vector3 cityScale = enP.position - stP.position;
+        Vector3 cityScale = enP.position - stP.position;                                                //find the (facing) distance between the two point and stretch the highway to reach them
         cityScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, cityScale.magnitude);
         this.transform.localScale = cityScale;
 
-        this.transform.position = new Vector3((enP.position.x - stP.position.x) / 2 + stP.position.x,
+        this.transform.position = new Vector3((enP.position.x - stP.position.x) / 2 + stP.position.x,   //set the highway center point to between the two cities
                                                this.transform.position.y,
                                               (enP.position.z - stP.position.z) / 2 + stP.position.z);
 
         TextMesh nameMesh = this.GetComponentInChildren(typeof(TextMesh)) as TextMesh;
-        nameMesh.text = highwayName;
+        nameMesh.text = highwayName;                                                                    //try to make the highway name to not be stretched out by "descaling" it
         nameMesh.transform.localScale = new Vector3(nameMesh.transform.localScale.x, nameMesh.transform.localScale.y, nameMesh.transform.localScale.z / cityScale.z);
     }
 

@@ -17,18 +17,22 @@ public class CityDetails : MonoBehaviour
     //public string cityName = "City ?";
     public CitySizes citySize = CitySizes.LARGE;
 
+    [HideInInspector] public float travelTime;          //time to cross the city in hours (will be scaled by road, traffic, and weather conditions)
+
     private FollowPath pathMaker;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         TextMesh nameMesh = this.GetComponentInChildren(typeof(TextMesh)) as TextMesh;
         nameMesh.text = this.name;
 
         this.transform.localScale = new Vector3(((int)citySize) / 2.0f, ((int)citySize) / 2.0f, ((int)citySize) / 2.0f);
+        travelTime = (int)citySize * 10.0f / 60.0f;                                                                         //set the time to cross a city starting at 10 minutes per city size
 
         GameObject go = GameObject.FindWithTag("Truck");
         pathMaker = (FollowPath)go.GetComponent(typeof(FollowPath));
+
     }
 
     // Update is called once per frame
