@@ -19,26 +19,26 @@ public class TruckControl : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("City"))
+        if ((col.gameObject.CompareTag("City")) && (!inTown))
         {
+            Debug.Log("We are here!");
             inTown = true;
-        }
-        
-    }
-    private void OnCollisionExit(Collision col)
-    {
-        Debug.Log("We are here!");
-        if (col.gameObject.CompareTag("City"))
-        {
-            inTown = false;
             float spd = col.gameObject.transform.localScale.z / col.gameObject.GetComponent<CityDetails>().travelTime;
             float nspd = FindObjectOfType<GameTime>().FindMySpeed(spd);
             this.gameObject.GetComponent<FollowPath>().SetSpeed(nspd);
 
             Debug.Log(spd + " becomes " + nspd);
+        }
+        
+    }
+    private void OnTriggerExit(Collider col)
+    {
 
+        if (col.gameObject.CompareTag("City"))
+        {
+            inTown = false;
         }
 
     }
