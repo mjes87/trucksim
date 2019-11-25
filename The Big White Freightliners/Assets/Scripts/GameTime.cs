@@ -8,6 +8,9 @@ public class GameTime : MonoBehaviour
 {
     public static GameTime instance = null;
 
+    [Range(0.3333f, 20.0f)]
+    public float timeScale = 1.0f;
+
     public Text timeText;
 
     [HideInInspector] static public DateTime gmTime;
@@ -46,6 +49,7 @@ public class GameTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gmTimeScale = timeScale;
         timeText.text = gmTime.ToShortDateString() + "  " + gmTime.ToShortTimeString();
     }
 
