@@ -11,7 +11,8 @@ public class GameTime : MonoBehaviour
     public static GameTime _instance = null;
     public static GameTime Instance { get { return _instance; } }
 
-    public float[] travelDelays = { 1.0f, 1.5f, 3.0f, 6.0f };
+    public static float[] trafficDelays = { 1.0f, 1.5f, 3.0f, 6.0f };
+    public float GetTrafficDelay(int trafficlevel) { return trafficDelays[trafficlevel]; }
 
     [Range(0.3333f, 20.0f)]
     public float timeScale = 1.0f;
