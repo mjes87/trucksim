@@ -16,6 +16,7 @@ public class CityDetails : MonoBehaviour
 
     //public string cityName = "City ?";
     public CitySizes citySize = CitySizes.LARGE;
+    public float timezone = 0.0f;
 
     [HideInInspector] public float travelTime;          //time to cross the city in hours (will be scaled by road, traffic, and weather conditions)
 
@@ -38,7 +39,24 @@ public class CityDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int hr = FindObjectOfType<GameTime>().GetHour();
+        float tmod = FindObjectOfType<GameTime>().GetHour();
+
+        if ((hr >= 7) || (hr <= 9) || (hr >= 4) || (hr <=6))
+        {
+            if ((hr == 8) || (hr == 5))
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+        else
+        {
+
+        }
         
 
     }

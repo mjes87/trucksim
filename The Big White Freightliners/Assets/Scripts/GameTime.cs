@@ -4,9 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum CityTrafficLevels { LIGHT, MODERATE, HEAVY }
+
 public class GameTime : MonoBehaviour
 {
-    public static GameTime instance = null;
+    public static GameTime _instance = null;
+    public static GameTime Instance { get { return _instance; } }
+
+    public float[] travelDelays = { 1.0f, 1.5f, 3.0f, 6.0f };
 
     [Range(0.3333f, 20.0f)]
     public float timeScale = 1.0f;
@@ -14,18 +19,21 @@ public class GameTime : MonoBehaviour
     public Text timeText;
 
     [HideInInspector] static public DateTime gmTime;
+    [HideInInspector] static public int hour;
+    public int GetHour () { return hour; }
 
     private static float gmTimeScale = 1.0f;             //base time scale is 1 minute Real Time = 1 hour Game Time (A good playerPref candidate)
+    
 
     private void Awake()
     {
-        if (instance == null)
+        if ((_instance != null) && (_instance != this))
         {
-            instance = this;
+             Destroy(this.gameObject);
         }
-        else if (instance != this)
+        else
         {
-            Destroy(this.gameObject);
+            _instance = this;
         }
     }
     // Start is called before the first frame update
@@ -55,7 +63,7 @@ public class GameTime : MonoBehaviour
 
     public void OnApplicationQuit()
     {
-        instance = null;
+        _instance = null;
     }
 
     /************************************************************
@@ -71,7 +79,7 @@ public class GameTime : MonoBehaviour
     void TimeTick()
     {
         gmTime = gmTime.AddMinutes(1.0f);                           //yes this is how it works
-
+        hour = gmTime.Hour;                                         //quick access value
     }
 
     /***********************************************************
