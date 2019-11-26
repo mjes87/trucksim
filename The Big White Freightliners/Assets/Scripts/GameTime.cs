@@ -53,6 +53,11 @@ public class GameTime : MonoBehaviour
         timeText.text = gmTime.ToShortDateString() + "  " + gmTime.ToShortTimeString();
     }
 
+    public void OnApplicationQuit()
+    {
+        instance = null;
+    }
+
     /************************************************************
         TimeTick
 
