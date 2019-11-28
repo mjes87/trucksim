@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { INTRO, MENU, GAMEPLAY }
+public enum GameState { INTRO, MENU, GAME }
 
 public delegate void OnStateChangeHandler();
 
@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
         {
             if (GameManager.instance == null)
             {
-                DontDestroyOnLoad(GameManager.instance);
-                GameManager.instance = new GameManager();
+                 GameManager.instance = new GameManager();
             }
             return GameManager.instance;
         }
