@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -9,12 +10,6 @@ public class Menu : MonoBehaviour
     void Awake()
     {
         GM = GameManager.Instance;
-        GM.OnStateChange += HandleOnStateChange;
-    }
-
-    public void HandleOnStateChange()
-    {
-        Debug.Log("OnStateChange called.");
     }
 
     public void OnGUI()
@@ -34,8 +29,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        GM.SetGameState(GameState.GAME);
-        Debug.Log(GM.gameState);
+        Application.LoadLevel("City and Road Works");
     }
 
     public void Quit()
