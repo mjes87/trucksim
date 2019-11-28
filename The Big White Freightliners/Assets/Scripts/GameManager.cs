@@ -2,40 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { INTRO, MENU, GAMEPLAY }
-
-public delegate void OnStateChangeHandler();
-
 public class GameManager : MonoBehaviour
 {
     protected GameManager() { }
 
-    private static GameManager instance = null;
-    public event OnStateChangeHandler OnStateChange;
+    public static GameManager Instance { get; private set; }
 
-    public GameState gameState { get; private set; }
-
-    public static GameManager Instance
+    private void Awake()
     {
-        get
+        if (Instance == null)
         {
-            if (GameManager.instance == null)
-            {
-                DontDestroyOnLoad(GameManager.instance);
-                GameManager.instance = new GameManager();
-            }
-            return GameManager.instance;
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
         }
-    }
-
-    public void SetGameState(GameState state)
-    {
-        this.gameState = state;
-        OnStateChange();
     }
 
     public void OnApplicationQuit()
     {
-        GameManager.instance = null;
+        Instance = null;
     }
 }
