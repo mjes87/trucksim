@@ -9,6 +9,8 @@ public class HighwayDetails : MonoBehaviour
     public GameObject endPoint;
     public float travelTime = 1.0f;
 
+    private int lastHour;
+    private int accidentRate = 48;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +34,28 @@ public class HighwayDetails : MonoBehaviour
         TextMesh nameMesh = this.GetComponentInChildren(typeof(TextMesh)) as TextMesh;
         nameMesh.text = highwayName;                                                                    //try to make the highway name to not be stretched out by "descaling" it
         nameMesh.transform.localScale = new Vector3(nameMesh.transform.localScale.x, nameMesh.transform.localScale.y, nameMesh.transform.localScale.z / cityScale.z);
+
+        lastHour = FindObjectOfType<GameTime>().GetHour();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        int hr = FindObjectOfType<GameTime>().GetHour();
+        if (lastHour != hr)                                                             //every hour check for an accident
+        {
+            lastHour = hr;
+
+            if (Random.Range(0, accidentRate) == 0)
+            {
+                GameObject acdnt = Instantiate(GameObject.Find("Accident").gameObject) as GameObject;
+                acdnt.transform.position = this.transform.position;
+                acdnt.transform.position = new Vector3(this.transform.position.x,           //place the accident anywhere along the length of the highway
+                                                       this.transform.position.y + 0.2f,
+                                                       Random.Range(-(this.transform.localScale.z / 2.0f), (this.transform.localScale.z / 2.0f)));
+
+                acdnt.GetComponent<MeshRenderer>().enabled = true;
+            }
+        }
     }
 }

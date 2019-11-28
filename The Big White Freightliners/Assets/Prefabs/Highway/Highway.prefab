@@ -105,9 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c1d70e983ae7745b32bad6b3fded3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highwayName: 
+  highwayName: 416
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
+  travelTime: 1
 --- !u!1001 &5027708310590518503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 500944852858963725, guid: 1ad083645cb9e3f4588343bad9715cbe,
         type: 3}
       propertyPath: m_Text
-      value: Highway 1
+      value: 416
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad083645cb9e3f4588343bad9715cbe, type: 3}

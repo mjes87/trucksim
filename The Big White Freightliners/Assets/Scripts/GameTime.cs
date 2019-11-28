@@ -21,7 +21,7 @@ public class GameTime : MonoBehaviour
 
     [HideInInspector] static public DateTime gmTime;
     [HideInInspector] static public int hour;
-    public int GetHour () { return hour; }
+    public int GetHour () { return hour; }              
 
     private static float gmTimeScale = 1.0f;             //base time scale is 1 minute Real Time = 1 hour Game Time (A good playerPref candidate)
     
