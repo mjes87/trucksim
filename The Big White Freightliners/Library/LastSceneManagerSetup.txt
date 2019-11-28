@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/City and Road works.unity
+- path: Assets/Scenes/Intro.unity
   isLoaded: 1
   isActive: 1
