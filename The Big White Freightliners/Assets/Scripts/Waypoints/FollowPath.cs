@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour
 {
 
-    public  GameObject startupNode;
+    public GameObject startupNode;
     public GameObject wpManager;
 
     public void SetSpeed(float spd) { speed = spd; }
