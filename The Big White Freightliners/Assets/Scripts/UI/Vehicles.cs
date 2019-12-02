@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Vehicles : MonoBehaviour
 {
     public GameObject SidePanel;
+    private AudioSource audioSource;
     int counter;
 
     public void togglePanel()
@@ -19,5 +20,12 @@ public class Vehicles : MonoBehaviour
         {
             SidePanel.gameObject.SetActive(false);
         }
+    }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(SoundManager.instance.truckArrives);
+        audioSource.PlayOneShot(SoundManager.instance.truckLeaves);
     }
 }

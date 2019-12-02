@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     GameManager GM;
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -19,10 +20,14 @@ public class Menu : MonoBehaviour
         if (GUI.Button (new Rect (10, 40, 80, 30), "Start"))
         {
             StartGame();
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(SoundManager.instance.buttonClicks);
         }
         if (GUI.Button (new Rect (10, 160, 80, 30), "Quit"))
         {
             Quit();
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(SoundManager.instance.buttonClicks);
         }
         GUI.EndGroup();
     }
@@ -30,6 +35,8 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         Application.LoadLevel("City and Road Works");
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(SoundManager.instance.mainMusic);
     }
 
     public void Quit()

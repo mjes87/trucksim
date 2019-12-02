@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Loads : MonoBehaviour
 {
     public GameObject SidePanel;
+    private AudioSource audioSource;
     int counter;
 
     public void togglePanel()
@@ -18,6 +19,15 @@ public class Loads : MonoBehaviour
         else
         {
             SidePanel.gameObject.SetActive(false);
+        }
+    }
+
+    public void newLoad()
+    {
+        if (counter >= 1)
+        {
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(SoundManager.instance.newLoad);
         }
     }
 }
