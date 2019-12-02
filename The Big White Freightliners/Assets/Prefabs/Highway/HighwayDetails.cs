@@ -41,7 +41,7 @@ public class HighwayDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int hr = FindObjectOfType<GameTime>().GetHour();
+/*        int hr = FindObjectOfType<GameTime>().GetHour();
         if (lastHour != hr)                                                             //every hour check for an accident
         {
             lastHour = hr;
@@ -49,14 +49,21 @@ public class HighwayDetails : MonoBehaviour
             if (Random.Range(0, accidentRate) == 0)
             {
                 GameObject acdnt = Instantiate(GameObject.Find("Accident").gameObject) as GameObject;
-                acdnt.transform.parent = this.gameObject.transform;
-                acdnt.transform.position = this.transform.position;
-                acdnt.transform.position = new Vector3(this.transform.position.x,           //place the accident anywhere along the length of the highway
-                                                       this.transform.position.y + 0.2f,
-                                                       this.transform.position.z + Random.Range(-(this.transform.localScale.z / 2.0f), (this.transform.localScale.z / 2.0f)));
-
+                //acdnt.transform.parent = this.gameObject.transform;
+                acdnt.transform.position = this.gameObject.transform.position;
+                //acdnt.transform.rotation = new Quaternion(1.0f, 0.0f, 180.0f, 0.0f);
+                //place the accident anywhere along the length of the highway
+                //acdnt.transform.position = new Vector3(this.gameObject.transform.position.x,
+                //                                       this.gameObject.transform.position.y + 0.2f,
+                //                                       Random.Range(-(this.transform.localScale.z / 2.0f), (this.transform.localScale.z / 2.0f)));
+                // acdnt.transform.position = new Vector3(acdnt.transform.position.x,
+                //                                        acdnt.transform.position.y,
+                //                                        Random.Range(-(this.transform.localScale.z / 2.0f), (this.transform.localScale.z / 2.0f)));
+                    /*(acdnt.transform.localScale.x / this.transform.localScale.x,
+                                                         acdnt.transform.localScale.y / this.transform.localScale.y,
+                                                         acdnt.transform.localScale.z / this.transform.localScale.z);
                 acdnt.GetComponent<MeshRenderer>().enabled = true;
             }
-        }
+        }*/
     }
 }
