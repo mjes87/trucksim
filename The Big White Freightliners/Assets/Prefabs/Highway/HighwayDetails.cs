@@ -49,10 +49,11 @@ public class HighwayDetails : MonoBehaviour
             if (Random.Range(0, accidentRate) == 0)
             {
                 GameObject acdnt = Instantiate(GameObject.Find("Accident").gameObject) as GameObject;
+                acdnt.transform.parent = this.gameObject.transform;
                 acdnt.transform.position = this.transform.position;
                 acdnt.transform.position = new Vector3(this.transform.position.x,           //place the accident anywhere along the length of the highway
                                                        this.transform.position.y + 0.2f,
-                                                       Random.Range(-(this.transform.localScale.z / 2.0f), (this.transform.localScale.z / 2.0f)));
+                                                       this.transform.position.z + Random.Range(-(this.transform.localScale.z / 2.0f), (this.transform.localScale.z / 2.0f)));
 
                 acdnt.GetComponent<MeshRenderer>().enabled = true;
             }

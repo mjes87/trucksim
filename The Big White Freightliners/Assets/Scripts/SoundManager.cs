@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        AudioSource[] sources = GetComponent<AudioSource>();
+        AudioSource[] sources = GetComponents<AudioSource>();
         foreach(AudioSource source in sources)
         {
             if(source.clip == null)

@@ -20,8 +20,10 @@ public class GameTime : MonoBehaviour
     public Text timeText;
 
     [HideInInspector] static public DateTime gmTime;
-    [HideInInspector] static public int hour;
-    public int GetHour () { return hour; }              
+    [HideInInspector] static public int gmHour;
+    [HideInInspector] static public bool gmPM;
+    public int GetHour () { return gmHour; }  
+    public bool isPM () { return gmPM; }
 
     private static float gmTimeScale = 1.0f;             //base time scale is 1 minute Real Time = 1 hour Game Time (A good playerPref candidate)
     
@@ -51,7 +53,7 @@ public class GameTime : MonoBehaviour
             PlayerPrefs.SetFloat("TimeScale", gmTimeScale);
             PlayerPrefs.Save();
         }
-        InvokeRepeating("TimeTick", 1.0f, 1.0f);
+        InvokeRepeating("TimeTick", 0.1f, 0.1f);
 
     }
 
@@ -60,6 +62,15 @@ public class GameTime : MonoBehaviour
     {
         gmTimeScale = timeScale;
         timeText.text = gmTime.ToShortDateString() + "  " + gmTime.ToShortTimeString();
+
+        if (timeText.text.Contains("PM"))
+        {
+            gmPM = true;
+        }
+        else
+        {
+            gmPM = false;
+        }
     }
 
     public void OnApplicationQuit()
@@ -79,8 +90,12 @@ public class GameTime : MonoBehaviour
     *************************************************************/
     void TimeTick()
     {
-        gmTime = gmTime.AddMinutes(1.0f);                           //yes this is how it works
-        hour = gmTime.Hour;                                         //quick access value
+        gmTime = gmTime.AddMinutes(timeScale);                             //yes this is how it works
+        gmHour = gmTime.Hour;                                              //quick access value\
+        if (gmPM)
+        {
+            gmHour += 12;
+        }
     }
 
     /***********************************************************

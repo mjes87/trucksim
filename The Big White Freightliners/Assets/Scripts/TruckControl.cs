@@ -21,7 +21,22 @@ public class TruckControl : MonoBehaviour
     {
         
     }
+    /************************************************************************************
+        OnTriggerEnter
 
+        In this event we determine if the truck is in contact with a road or a city for calculting
+        a Truck's speed. City traffic calculations take priority over high traffic issues.
+
+        if in a city, the speed is caclulated for what is required to cross it's diameter
+        in the cities specified "travel time" (game time in hours)
+
+        if on the highway, the same calculation is made using the highways z scale;
+        which is effectively the length of the highway.
+
+        TODO: add detection for accident and construction markers, with corresponding 
+        delay calculation
+
+    ************************************************************************************/        
     private void OnTriggerEnter(Collider col)
     {
         if ((col.gameObject.CompareTag("CityLimits")) && (!inTown))
@@ -37,25 +52,12 @@ public class TruckControl : MonoBehaviour
 
             Debug.Log(tT + " " + cZ + " " + spd + " becomes " + nspd);
         }
-/*        else if ((col.gameObject.CompareTag("Highway")) && (!onTheRoad) && (!inTown))
-        {
-            Debug.Log("On the Highway " + col.gameObject.name);
-            onTheRoad = true;
-            float tT = col.gameObject.GetComponentInParent<HighwayDetails>().travelTime;
-            float cZ = col.gameObject.transform.localScale.z;
-            float spd = cZ / tT;
-            float nspd = FindObjectOfType<GameTime>().FindMySpeed(spd);
-            this.gameObject.GetComponent<FollowPath>().SetSpeed(nspd);
-            lastSpeedSetter = col.gameObject;
-
-            Debug.Log(tT + " " + cZ + " " + spd + " becomes " + nspd);
-        }
-  */     
     }
 
     private void OnTriggerStay(Collider col)
     {
-        if ((!inTown) && (col.gameObject != lastSpeedSetter))
+
+        if (col.gameObject.CompareTag("Highway") && (!inTown) && (col.gameObject != lastSpeedSetter))
         {
             Debug.Log("On the Highway " + col.gameObject.name);
             onTheRoad = true;

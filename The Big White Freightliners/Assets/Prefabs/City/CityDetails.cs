@@ -16,7 +16,7 @@ public class CityDetails : MonoBehaviour
 
     //public string cityName = "City ?";
     public CitySizes citySize = CitySizes.LARGE;
-    public float timezone = 0.0f;
+    public int timeZone = 0;
     public Color[] trafficColors = { Color.green, Color.yellow, Color.red + Color.green / 3 };
 
     [HideInInspector] public float travelTime;          //time to cross the city in hours (will be scaled by road, traffic, and weather conditions)
@@ -45,16 +45,16 @@ public class CityDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int hr = FindObjectOfType<GameTime>().GetHour();
+        int hr = FindObjectOfType<GameTime>().GetHour() - timeZone;
 
         if (hr != lastHour)                                                 //I hate the idea of doing this 60x a second when it only rarely changes
         {
             lastHour = hr;
             CityTrafficLevels tl = CityTrafficLevels.LIGHT;
 
-            if (((hr >= 7) && (hr <= 9)) || ((hr >= 4) && (hr <= 6)))            //set up time bands for rush hour
+            if (((hr >= 7) && (hr <= 9)) || ((hr >= 16) && (hr <= 18)))            //set up time bands for rush hour
             {
-                if ((hr == 8) || (hr == 5))
+                if ((hr == 8) || (hr == 17))
                 {
                     tl = CityTrafficLevels.HEAVY;
                 }
