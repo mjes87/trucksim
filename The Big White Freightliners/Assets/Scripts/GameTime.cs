@@ -14,7 +14,7 @@ public class GameTime : MonoBehaviour
     public static float[] trafficDelays = { 1.0f, 1.5f, 3.0f, 6.0f };
     public float GetTrafficDelay(int trafficlevel) { return trafficDelays[trafficlevel]; }
 
-    [Range(0.3333f, 20.0f)]
+    [Range(0.3333f, 10.0f)]
     public float timeScale = 1.0f;
 
     public Text timeText;
@@ -55,12 +55,19 @@ public class GameTime : MonoBehaviour
         }
         InvokeRepeating("TimeTick", 0.1f, 0.1f);
 
+        timeScale = gmTimeScale;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        gmTimeScale = timeScale;
+        if (gmTimeScale != timeScale)
+        {
+            UpdateTimeScale(timeScale, true);
+            timeScale = gmTimeScale;
+        }
+
         timeText.text = gmTime.ToShortDateString() + "  " + gmTime.ToShortTimeString();
 
         if (timeText.text.Contains("PM"))
@@ -85,13 +92,16 @@ public class GameTime : MonoBehaviour
         increment out Game "Minutes of the day". 
 
         By adding gmTimeScale, our orignal time ratio of 1hr/1m
-        is automatically scaled
+        is automatically scaled.
+
+        changed to 1/10th of a second for rapid update of the 
+        date/time text field
 
     *************************************************************/
     void TimeTick()
     {
-        gmTime = gmTime.AddMinutes(timeScale);                             //yes this is how it works
-        gmHour = gmTime.Hour;                                              //quick access value\
+        gmTime = gmTime.AddMinutes(timeScale/10.0f);                            //yes this is how it works
+        gmHour = gmTime.Hour;                                                   //quick access value\
         if (gmPM)
         {
             gmHour += 12;
@@ -135,5 +145,19 @@ public class GameTime : MonoBehaviour
     public float FindMySpeed (float untph)
     {
         return (untph / 60.0f * gmTimeScale);
+    }
+
+    /**************************************************************
+        gmHoursToRealSeconds
+
+        This value takes in number of game hours and returns 
+        a number of seconds in Real Time. 
+
+        Primarly for coroutine waits
+
+    ***************************************************************/
+    public float gmHoursToRealSeconds(float gmHrs)
+    {
+        return (gmHrs * 60.0f / gmTimeScale);
     }
 }

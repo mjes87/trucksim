@@ -9,6 +9,7 @@ public class FollowPath : MonoBehaviour
     public GameObject wpManager;
 
     public void SetSpeed(float spd) { speed = spd; }
+    public float GetSpeed() { return speed; }
 
     Transform goal;
     float speed = 5.0f;
