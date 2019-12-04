@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inspection : MonoBehaviour
 {
 
-    private int hourlyRate = 96;
+    private int hourlyRate = 10; //96;
     private float hourlyDuration = 0.5f;
     private int lastHour;
     private float waitTime;

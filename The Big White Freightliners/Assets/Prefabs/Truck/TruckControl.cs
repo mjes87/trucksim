@@ -45,7 +45,8 @@ public class TruckControl : MonoBehaviour
             Debug.Log("We are here!");
             inTown = true;
             float tT = col.gameObject.GetComponentInParent<CityDetails>().travelTime;
-            float cZ = col.gameObject.GetComponent<CapsuleCollider>().radius * 2.0f;
+            //float cZ = col.gameObject.GetComponent<CapsuleCollider>().radius * 2.0f;
+            float cZ = col.gameObject.transform.localScale.z; // * 2.0f;
             float spd = cZ / tT;
             float nspd = FindObjectOfType<GameTime>().FindMySpeed(spd);
             this.gameObject.GetComponent<FollowPath>().SetSpeed(nspd);
@@ -78,6 +79,7 @@ public class TruckControl : MonoBehaviour
         if (col.gameObject.CompareTag("CityLimits"))
         {
             inTown = false;
+
         }
         else if (col.gameObject.CompareTag("Highway"))
         {

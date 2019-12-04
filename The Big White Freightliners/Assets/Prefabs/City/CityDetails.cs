@@ -39,7 +39,7 @@ public class CityDetails : MonoBehaviour
         GameObject cityArea = this.gameObject.transform.Find("CityArea").gameObject;
         cityAreaRenderer = cityArea.GetComponent<Renderer>();
         cityAreaRenderer.material.color = trafficColors[(int)CityTrafficLevels.LIGHT];
-        travelTime = (int)citySize * 10.0f / 60.0f;                                     //set the time to cross a city starting at 10 minutes per city size (adjusted for traffic level)
+        travelTime = (int)citySize * (10.0f / 60.0f);                                     //set the time to cross a city starting at 10 minutes per city size (adjusted for traffic level)
     }
 
     // Update is called once per frame
@@ -63,8 +63,7 @@ public class CityDetails : MonoBehaviour
                     tl = CityTrafficLevels.MODERATE;
                 }
             }
-
-            float tmod = FindObjectOfType<GameTime>().GetTrafficDelay((int)tl);
+            float tmod = FindObjectOfType<GameTime>().GetTrafficDelay((int)tl);     //predfined scale of the travel time based on level of traffic
             travelTime = (int)citySize * 10.0f / 60.0f * tmod;                       //set the time to cross a city starting at 10 minutes per city size (adjusted for traffic level)
             cityAreaRenderer.material.color = trafficColors[(int)tl];
         }
