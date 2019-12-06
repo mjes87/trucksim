@@ -5,13 +5,18 @@ using UnityEngine;
 public class Inspection : MonoBehaviour
 {
 
-    private int hourlyRate = 10; //96;
+    public AudioClip inspect;
+    public AudioClip truckLeaves;
+
+    private int hourlyRate =5; //96;
     private float hourlyDuration = 0.5f;
     private int lastHour;
     private float waitTime;
     private bool beingInspected = false;
+    private bool onTheRoad = false;
     private float lastSpeed;
     private GameObject inspector;
+    private AudioSource audioSource;
 
     private IEnumerator coroutine;
 
@@ -23,12 +28,16 @@ public class Inspection : MonoBehaviour
     void Start()
     {
         lastHour = FindObjectOfType<GameTime>().GetHour() - 1;
+        audioSource = this.GetComponent<AudioSource>();
+        //audioSource = FindObjectOfType<SoundManager>().GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!beingInspected)
+
+        //onTheRoad = this.GetComponent<TruckControl>().onTheRoad;
+        if ((!beingInspected)) // && (onTheRoad))
         {
             int hr = FindObjectOfType<GameTime>().GetHour();
             if (lastHour != hr)                                                             //every hour check for an accident
@@ -56,6 +65,9 @@ public class Inspection : MonoBehaviour
                         waitTime = FindObjectOfType<GameTime>().gmHoursToRealSeconds(hourlyDuration * 4.0f);
                     }
                     Debug.Log("Inspection Time: " + waitTime);
+                    //SoundManager.instance.PlayOneShot(SoundManager.instance.scaleStation);
+                    audioSource.PlayOneShot(inspect);
+
                     lastSpeed = this.gameObject.GetComponent<FollowPath>().GetSpeed();
                     this.gameObject.GetComponent<FollowPath>().SetSpeed(0.0f);
                     coroutine = InspectionWait(waitTime, lastSpeed);
@@ -70,6 +82,8 @@ public class Inspection : MonoBehaviour
         yield return new WaitForSeconds(wt);
         this.gameObject.GetComponent<FollowPath>().SetSpeed(spd);
         Destroy(inspector);
+        //SoundManager.instance.PlayOneShot(SoundManager.instance.truckLeaves);
+        audioSource.PlayOneShot(truckLeaves);
         beingInspected = false;
     }
 }

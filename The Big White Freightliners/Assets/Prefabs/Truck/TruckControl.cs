@@ -5,8 +5,10 @@ using UnityEngine;
 public class TruckControl : MonoBehaviour
 {
 
+    [HideInInspector] public bool onTheRoad = false;
+
     private bool inTown = false;
-    private bool onTheRoad = false;
+
 
     GameObject lastSpeedSetter;
 

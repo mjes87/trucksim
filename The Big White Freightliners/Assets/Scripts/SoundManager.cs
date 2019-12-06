@@ -17,7 +17,8 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        if (instance == null)
+
+       if (instance == null)
         {
             instance = this;
         }
@@ -33,7 +34,7 @@ public class SoundManager : MonoBehaviour
                 soundEffectAudio = source;
             }
         }
-        
+
         DontDestroyOnLoad(gameObject);
     }
     public void PlayOneShot(AudioClip clip)
