@@ -15,7 +15,7 @@ public class GameTime : MonoBehaviour
     public float GetTrafficDelay(int trafficlevel) { return trafficDelays[trafficlevel]; }
 
     [Range(0.3333f, 10.0f)]
-    public float timeScale = 1.0f;
+    public float timeScale = 10.0f;
 
     public Text timeText;
 
@@ -25,7 +25,7 @@ public class GameTime : MonoBehaviour
     public int GetHour () { return gmHour; }  
     public bool isPM () { return gmPM; }
 
-    private static float gmTimeScale = 1.0f;             //base time scale is 1 minute Real Time = 1 hour Game Time (A good playerPref candidate)
+    private static float gmTimeScale = 10.0f;             //base time scale is 1 minute Real Time = 1 hour Game Time (A good playerPref candidate)
     
 
     private void Awake()
